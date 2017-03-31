@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world.component';
+import { CounterComponent } from './counter.component';
+
 
 @NgModule({
     imports: [
@@ -9,8 +12,12 @@ import { HelloWorldComponent } from './hello-world.component';
     ],
     declarations: [
 	AppComponent,
-	HelloWorldComponent
+	HelloWorldComponent,
+	CounterComponent
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [
+	AppComponent,
+	CounterComponent
+    ]
 })
 export class AppModule {}

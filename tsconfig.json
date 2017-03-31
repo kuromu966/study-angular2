@@ -4,7 +4,8 @@
 	"noImplicitAny": true,
 	"experimentalDecorators": true,
 	"emitDecoratorMetadata": true,
-	"moduleResolution": "node"
+	"moduleResolution": "node",
+	"outDir": "build"
     },
     "filesGlob": [
 	"./**/*.ts",
@@ -13,7 +14,7 @@
 	"./node_modules/typescript/lib/lib.es6.d.ts"
     ],
     "files": [
-	"./index.ts",
+	"./src/index.ts",
 	"./node_modules/typescript/lib/lib.es6.d.ts"
     ]
 }

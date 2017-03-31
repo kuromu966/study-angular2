@@ -6,7 +6,7 @@
   "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "tsc": "tsc -p .",
-      "webpack": "webpack ./index.js --output-filename ./bundle.js",
+      "webpack": "webpack ./build/index.js --output-filename ./dist/bundle.js",
       "build": "npm run tsc && npm run webpack"
   },
   "keywords": [],
