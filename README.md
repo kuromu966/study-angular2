@@ -14,6 +14,4 @@ make setup
 
 ## Build
 
-```
-make build
-```
+`make` or `make build`
