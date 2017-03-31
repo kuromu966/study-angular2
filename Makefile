@@ -1,22 +1,26 @@
+BUILD_DIR = ./build
+DIST_DIR = ./dist
+SRC_DIR = ./src
+
 .PHONY: all
 all:
-	@echo 'make [setup|build|clean|log]'
+	make build
 
 
 .PHONY: clean
 clean:
-	-@ if [ -d ./build ]; then rm -r ./build; fi
-	-@ if [ -d ./dist ]; then rm -r ./dist; fi
+	-@ if [ -d ${BUILD_DIR} ]; then rm -r ${BUILD_DIR}; fi
+	-@ if [ -d ${DIST_DIR} ]; then rm -r ${DIST_DIR}; fi
 	-@find . -type f -name '*~' -exec rm -v {} \;
 
 
 .PHONY:build
 build:
-	-@ if [ -d ./build ]; then rm -r ./build; fi
-	-@ if [ -d ./dist ]; then rm -r ./dist; fi
-	mkdir ./build
-	mkdir ./dist
-	cp ./src/index.html ./dist/
+	-@ if [ -d ${BUILD_DIR} ]; then rm -r ${BUILD_DIR}; fi
+	-@ if [ -d ${DIST_DIR} ]; then rm -r ${DIST_DIR}; fi
+	mkdir ${BUILD_DIR}
+	mkdir ${DIST_DIR}
+	cp ${SRC_DIR}/index.html ${DIST_DIR}/
 	npm run build
 
 
